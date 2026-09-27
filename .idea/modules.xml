@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kotlin_ai_autonomous.iml" filepath="$PROJECT_DIR$/.idea/kotlin_ai_autonomous.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ai_autonomous_development.iml" filepath="$PROJECT_DIR$/.idea/ai_autonomous_development.iml" />
     </modules>
   </component>
 </project>

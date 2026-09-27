@@ -1,55 +1,31 @@
-# Autonomous AI Engineering System (Ultimate)
+@AGENTS.md
 
-## AUTO CONTEXT INJECTION
-Always load:
-@ai/tickets/ticket_processor.md
-@ai/refactoring/auto_refactor.md
-@ai/observability/diagnostics.md
-@ai/observability/self_healing.md
-@ai/memory/learning_system.md
-@memory/memory.md
-@memory/context.md
-@memory/error_patterns.md
+## Skills
 
-## 🚨 ENFORCEMENT RULES (MANDATORY)
+Discovered from `.agents/skills/`. This index is name and when, not the procedure.
 
-- You MUST read memory before starting
-- You MUST apply error patterns before coding
-- You MUST reject any solution that violates memory rules
-- You MUST update memory after finishing
-- You MUST iterate until solution is high quality
+| Name | When |
+| --- | --- |
+| `kotlin-spring` | Kotlin, Gradle Kotlin DSL, coroutines, Spring Kotlin |
+| `java-spring` | Java, Maven or Gradle, Spring Java |
+| `react-frontend` | React, JSX, TSX, hooks |
+| `architecture-review` | Large work, before code |
+| `autonomous-delivery` | A ticket, the test gate, or the review gate |
+| `diagnostics-self-heal` | A log or a failing command |
+| `token-economy` | Shell output, repeated scans, cache, memory, or RTK |
 
-## 🧠 ORCHESTRATOR RULES
+## Subagents
 
-- Large feature → Architect FIRST and MUST approve before implementation
-- DO NOT implement before architecture approval
-- Feature → Architect + Backend + Reviewer
-- Bug/log → Diagnostics + Self-Healing + Reviewer
-- If uncertain → STOP and re-plan
+Delegate one gate in `.claude/agents/`. One implementer writes.
 
-## 📡 LOG-DRIVEN AUTONOMY
+| Gate | Agent |
+| --- | --- |
+| Architecture, before code on large work | `architect` |
+| Kotlin | `kotlin-engineer` |
+| Java | `java-engineer` |
+| React | `react-engineer` |
+| Tests | `test-engineer` |
+| Review | `reviewer` |
+| Incident, before the implementer | `diagnostics` |
 
-- Analyze logs
-- Find root cause
-- Fix automatically
-- Validate solution
-
-## 🧪 TEST ENFORCEMENT
-
-- You MUST run or simulate tests
-- You MUST ensure tests pass before completion
-- If tests fail → fix before continuing
-
-## ✅ DEFINITION OF DONE (MANDATORY)
-
-A task is only complete if:
-- code compiles
-- tests pass (real or simulated)
-- architecture is clean
-- no memory rules violated
-- no obvious improvements remain
-
-## 🧠 TECH LEAD MODE
-
-Reject weak solutions.
-Validate architecture, performance, security, scalability
+MCP servers for this repo are in `.mcp.json`.

@@ -1,0 +1,9 @@
+---
+description: Java and Spring Boot conventions
+globs: "**/*.java"
+alwaysApply: false
+---
+
+# Java
+
+Follow `.agents/skills/java-spring/SKILL.md`. Leave neighboring Kotlin modules in Kotlin.

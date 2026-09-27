@@ -1,0 +1,9 @@
+---
+description: Kotlin and Spring Boot conventions
+globs: "**/*.{kt,kts}"
+alwaysApply: false
+---
+
+# Kotlin
+
+Follow `.agents/skills/kotlin-spring/SKILL.md`. Keep this module in Kotlin.

@@ -1,0 +1,9 @@
+---
+description: React component and state conventions
+globs: "**/*.{tsx,jsx}"
+alwaysApply: false
+---
+
+# React
+
+Follow `.agents/skills/react-frontend/SKILL.md`.

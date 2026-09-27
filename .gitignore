@@ -1,0 +1,7 @@
+.claude/settings.local.json
+*.local.md
+.env
+.env.*
+!.env.example
+out/
+.rtk/

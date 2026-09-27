@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/hooks/rtk-rewrite.ps1",
+        "matcher": "Shell|Bash"
+      }
+    ]
+  }
+}
