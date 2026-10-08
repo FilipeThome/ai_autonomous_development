@@ -1,6 +1,7 @@
 ---
 name: java-spring
 description: Implements Java and Spring Boot with constructor injection, records, and the build the repo already uses. Use when the task touches Java, Maven, Spring Java, JUnit, or when the user mentions Java.
+disable-model-invocation: true
 ---
 
 # Java and Spring Boot

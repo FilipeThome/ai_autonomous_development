@@ -1,6 +1,7 @@
 ---
 name: architecture-review
 description: Reviews a design and returns approval or required changes before cross-module implementation. Use when adding a feature, a dependency, a module, or a new boundary in Kotlin, Java, or React.
+disable-model-invocation: true
 ---
 
 # Architecture review

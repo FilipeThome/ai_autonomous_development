@@ -1,6 +1,7 @@
 ---
 name: token-economy
 description: Cuts token use with a fact cache, persistent memory, prompt-cache stability, and RTK shell compression. Use when running shell commands, re-reading the repo, handling logs, or when the user mentions tokens, cache, memory, or RTK.
+disable-model-invocation: true
 ---
 
 # Token economy

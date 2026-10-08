@@ -66,6 +66,7 @@ Skills stay in `.agents/skills/` only. They are not copied into `.claude/skills/
 | `autonomous-delivery` | A ticket, the test gate, or the review gate |
 | `diagnostics-self-heal` | A failing command, a CI log, or a stack trace |
 | `token-economy` | Repeated scans, shell output, cache, memory, or RTK |
+| `rigorous-review` | A code review or a security review, any language |
 
 ## Token spend
 

@@ -33,12 +33,16 @@ if ($trimmed -match "^(?i)rtk(\s|$)") {
     Exit-Pass
 }
 
-$rtk = Get-Command rtk -ErrorAction SilentlyContinue
-if (-not $rtk) {
-    Exit-Pass
+$rtkPath = Join-Path $env:USERPROFILE ".local\bin\rtk.exe"
+if (-not (Test-Path -LiteralPath $rtkPath)) {
+    $rtkCmd = Get-Command rtk -ErrorAction SilentlyContinue
+    if (-not $rtkCmd) {
+        Exit-Pass
+    }
+    $rtkPath = $rtkCmd.Source
 }
 
-$rewritten = & $rtk.Source rewrite $trimmed 2>$null
+$rewritten = & $rtkPath rewrite $trimmed 2>$null
 if ($rewritten -is [System.Array]) {
     $rewritten = $rewritten -join "`n"
 }

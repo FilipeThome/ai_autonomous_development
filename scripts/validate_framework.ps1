@@ -22,6 +22,7 @@ $required = @(
     ".cursor/rules/kotlin-spring.mdc",
     ".cursor/rules/java.mdc",
     ".cursor/rules/react.mdc",
+    ".cursor/rules/rigorous-review.mdc",
     ".cursor/hooks.json",
     ".cursor/hooks/rtk-rewrite.ps1",
     ".cursor/mcp.json",
@@ -74,7 +75,8 @@ $skills = @(
     "java-spring",
     "react-frontend",
     "diagnostics-self-heal",
-    "token-economy"
+    "token-economy",
+    "rigorous-review"
 )
 
 foreach ($name in $skills) {
@@ -190,6 +192,30 @@ foreach ($doc in @(
 $cacheLines = Get-Content -LiteralPath (Join-Path $root "memory/cache.md")
 if ($cacheLines.Count -gt 40) {
     throw "memory/cache.md has $($cacheLines.Count) lines (max 40)"
+}
+
+$reviewRule = Get-Content -LiteralPath (Join-Path $root ".cursor/rules/rigorous-review.mdc") -Raw
+if ($reviewRule -notmatch "\.agents/skills/rigorous-review/SKILL\.md") {
+    throw "rigorous-review rule must point at the skill"
+}
+if ($reviewRule -match "(?m)^alwaysApply:\s*true\s*$") {
+    throw "rigorous-review rule must not always apply"
+}
+if ($reviewRule -match "(?m)^globs:") {
+    throw "rigorous-review rule must stay task-scoped, not file-scoped"
+}
+
+$reviewSkill = Get-Content -LiteralPath (Join-Path $root ".agents/skills/rigorous-review/SKILL.md") -Raw
+foreach ($needle in @("Code review", "Security review", "Verdict: accept", "SECURITY_REVIEW.md", "LANGUAGE_HAZARDS.md")) {
+    if ($reviewSkill -notmatch [regex]::Escape($needle)) {
+        throw "rigorous-review skill missing $needle"
+    }
+}
+foreach ($stageFile in @("CODE_REVIEW.md", "SECURITY_REVIEW.md", "LANGUAGE_HAZARDS.md")) {
+    $stageText = Get-Content -LiteralPath (Join-Path $root ".agents/skills/rigorous-review/$stageFile") -Raw
+    if ($stageText -notmatch "blocker") {
+        throw "rigorous-review $stageFile missing blocker"
+    }
 }
 
 $tokenSkill = Get-Content -LiteralPath (Join-Path $root ".agents/skills/token-economy/SKILL.md") -Raw

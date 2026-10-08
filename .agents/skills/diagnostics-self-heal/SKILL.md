@@ -1,6 +1,7 @@
 ---
 name: diagnostics-self-heal
 description: Finds the root cause of a failing command, stack trace, or log, applies the smallest fix, and adds a regression test. Use when CI is red, a command failed, or the user pastes a log.
+disable-model-invocation: true
 ---
 
 # Diagnostics and self-healing

@@ -13,6 +13,7 @@ Discovered from `.agents/skills/`. This index is name and when, not the procedur
 | `autonomous-delivery` | A ticket, the test gate, or the review gate |
 | `diagnostics-self-heal` | A log or a failing command |
 | `token-economy` | Shell output, repeated scans, cache, memory, or RTK |
+| `rigorous-review` | A code review or a security review, any language |
 
 ## Subagents
 

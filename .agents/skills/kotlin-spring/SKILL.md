@@ -1,6 +1,7 @@
 ---
 name: kotlin-spring
 description: Implements Kotlin and Spring Boot with null safety, structured concurrency, and Gradle. Use when the task touches Kotlin, Gradle Kotlin DSL, coroutines, MockK, Spring Kotlin, or when the user mentions Kotlin.
+disable-model-invocation: true
 ---
 
 # Kotlin and Spring Boot

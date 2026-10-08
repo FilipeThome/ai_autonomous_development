@@ -1,6 +1,7 @@
 ---
 name: react-frontend
 description: Implements React UI with the app's existing framework, local state, and tests. Use when the task touches React, JSX, TSX, hooks, Vite, Next.js, or frontend components.
+disable-model-invocation: true
 ---
 
 # React

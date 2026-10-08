@@ -1,6 +1,7 @@
 ---
 name: autonomous-delivery
 description: Runs sequential delivery gates for a feature, bugfix, or ticket across Kotlin, Java, and React. Use when the user asks to deliver, implement, fix, or finish a change, and for the test and review gates.
+disable-model-invocation: true
 ---
 
 # Autonomous delivery

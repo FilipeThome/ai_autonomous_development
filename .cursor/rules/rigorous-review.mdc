@@ -1,0 +1,8 @@
+---
+description: Strict code review and security review for any language. Use when the user asks for a code review, a security review, a PR review, a diff review, revisão de código, or revisão de segurança.
+alwaysApply: false
+---
+
+# Rigorous review
+
+Read and follow `.agents/skills/rigorous-review/SKILL.md` before judging a diff. Run the code-review stage, then the security-review stage. Do not edit the change under review.
